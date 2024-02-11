@@ -1,0 +1,38 @@
+﻿@model List<Employee>
+<div><a asp-controller="Employee" asp-action="AddEmp">Add Employee</a></div>
+<br />
+<table class="table table-bordered table table-hover">
+
+
+    <thead class="thead-dark">
+
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+       
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+
+</thead>
+<tbody>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Salary</td>
+            <td>@item.Gender</td>
+            <td>@item.Address</td>
+                <td><a asp-controller="Employee" asp-action="UpdateEmp" asp-route-id="@item.Id" >Update</a> </td>
+            <td><a asp-controller="Employee" asp-action="DeleteEmp" asp-route-id="@item.Id" onclick="return confirm('Are you Sure?')">Delete</a></td>
+        </tr>
+    }
+
+</tbody>
+
+</table>

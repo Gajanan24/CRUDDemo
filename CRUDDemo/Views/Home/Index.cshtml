@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .text-center {
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-4">Welcome to Our MVC App</h1>
+            <p>This MVC app is built using modern technologies to manage and display employee information.</p>
+            <p>Learn more about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+            <h2>Employee List</h2>
+            <p>Click below to see the list of employees:</p>
+            <a href="https://localhost:7257/Employee/EmpList">See Employee List</a>
+        </div>
+    </div>
+</body>
+</html>
